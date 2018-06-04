@@ -5,8 +5,9 @@ export default class MessageInput extends React.Component {
 		super(props);
 
 		this.state = {
-			name: 'Nino',
-			message: '' 
+			from: 'Nino',
+			message: '',
+			me: true
 		}
 
 		this.handleOnChange = this.handleOnChange.bind(this)
@@ -31,7 +32,7 @@ export default class MessageInput extends React.Component {
 	}
 
 	render() {
-		const { name, message } = this.state
+		const { from, message } = this.state
 		return (
 			<form method="POST" style={{ backgroundColor: '#ecf0f1', padding: '10px'}} onSubmit={this.handleSubmit}>
 				<div className="input-group">
